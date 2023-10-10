@@ -1,0 +1,181 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Calculador de Puntaje de Comunidad - Servicio 2 - G5",
+    "description": "El propósito de este servicio es calcular el grado de confianza que tienen los usuarios y comunidades a partir de ciertas condiciones relacionadas a interacciones de estos con los incidentes.\n\nLas situaciones a evaluar son: \n- apertura/cierre de incidentes\n- apertura fraudulenta\n- cierre fraudulento\n\nAlgunos enlaces útiles:\n- [Ejemplo de un request body en json](/exampleInputs.json)\n- [Ejemplo de un response body en json](/exampleResponsePuntajeComunidad.json)",
+    "version": "0.1.3"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/",
+      "description": "Servidor de API"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Inputs",
+      "description": "cálculo de grados de confianza"
+    }
+  ],
+  "paths": {
+    "/calcularPuntaje": {
+      "post": {
+        "tags": [
+          "Inputs"
+        ],
+        "summary": "Retorna el puntaje de la comunidad y los miembros luego de hacer el calculo sobre los inputs recibidos",
+        "description": "recibe una lista de incidentes y una comunidad para hacer el cálculo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Input"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Grado de confianza actualizado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comunidad"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Not Acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Generic Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Miembro": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 15
+          },
+          "puntaje": {
+            "type": "number",
+            "format": "double",
+            "example": 3.8
+          }
+        }
+      },
+      "Incidente": {
+        "type": "object",
+        "properties": {
+          "incidenteId": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "codigoServicio": {
+            "type": "integer",
+            "format": "int64",
+            "example": 10
+          },
+          "abiertoPorId": {
+            "type": "integer",
+            "format": "int64",
+            "example": 15
+          },
+          "cerradoPorId": {
+            "type": "integer",
+            "format": "int64",
+            "example": 15
+          },
+          "fechaApertura": {
+            "type": "string",
+            "example": "2023-09-12T21:20:56.319149"
+          },
+          "fechaCierre": {
+            "type": "string",
+            "example": "2023-09-12T21:20:58.319149"
+          }
+        }
+      },
+      "Comunidad": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 111
+          },
+          "puntaje": {
+            "type": "number",
+            "format": "double",
+            "example": 3.2
+          },
+          "miembros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Miembro"
+            }
+          }
+        }
+      },
+      "Input": {
+        "type": "object",
+        "properties": {
+          "incidentes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Incidente"
+            }
+          },
+          "comunidad": {
+            "$ref": "#/components/schemas/Comunidad"
+          }
+        }
+      },
+      "Response": {
+        "type": "object",
+        "properties": {
+          "comunidad": {
+            "$ref": "#/components/schemas/Comunidad"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "respuesta": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

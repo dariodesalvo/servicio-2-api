@@ -1,0 +1,71 @@
+{
+  "incidentes": [
+    {   "incidenteId": 1,
+      "codigoServicio": 10,
+      "abiertoPorId": 1,
+      "cerradoPorId": 2,
+      "fechaApertura": "2023-09-12T21:20:56.319149",
+      "fechaCierre": "2023-09-12T21:20:58.319149"
+    },
+    {   "incidenteId": 2,
+      "codigoServicio": 10,
+      "abiertoPorId": 3,
+      "cerradoPorId": 4,
+      "fechaApertura": "2023-09-12T21:22:58.319149",
+      "fechaCierre": "2023-09-13T19:17:48.319149"
+    },
+    {   "incidenteId": 3,
+      "codigoServicio": 13,
+      "abiertoPorId": 5,
+      "cerradoPorId": 6,
+      "fechaApertura": "2023-09-10T19:10:56.319149",
+      "fechaCierre": "2023-09-10T19:11:48.319149"
+    },
+    {   "incidenteId": 4,
+      "codigoServicio": 13,
+      "abiertoPorId": 7,
+      "cerradoPorId": 8,
+      "fechaApertura": "2023-09-13T22:10:56.319149",
+      "fechaCierre": "2023-09-15T19:11:48.319149"
+    }
+
+  ],
+  "comunidad": {
+    "id": 111,
+    "puntaje": 3.00,
+    "miembros": [
+      {
+        "id": 1,
+        "puntaje": 5.00
+      },
+      {
+        "id": 2,
+        "puntaje": 5.00
+      },
+      {
+        "id": 3,
+        "puntaje": 5.00
+      },
+      {
+        "id": 4,
+        "puntaje": 5.00
+      },
+      {
+        "id": 5,
+        "puntaje": 5.00
+      },
+      {
+        "id": 6,
+        "puntaje": 5.00
+      },
+      {
+        "id": 7,
+        "puntaje": 5.00
+      },
+      {
+        "id": 8,
+        "puntaje": 5.00
+      }
+    ]
+  }
+}

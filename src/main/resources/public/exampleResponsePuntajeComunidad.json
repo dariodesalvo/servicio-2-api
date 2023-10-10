@@ -1,0 +1,38 @@
+{
+  "id": 111,
+  "puntaje": 5.275,
+  "miembros": [
+    {
+      "id": 1,
+      "puntaje": 5.3
+    },
+    {
+      "id": 2,
+      "puntaje": 4.8
+    },
+    {
+      "id": 3,
+      "puntaje": 5.5
+    },
+    {
+      "id": 4,
+      "puntaje": 5.5
+    },
+    {
+      "id": 5,
+      "puntaje": 5.3
+    },
+    {
+      "id": 6,
+      "puntaje": 4.8
+    },
+    {
+      "id": 7,
+      "puntaje": 5.5
+    },
+    {
+      "id": 8,
+      "puntaje": 5.5
+    }
+  ]
+}

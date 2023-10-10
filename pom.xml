@@ -6,10 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ar.edu.utn.frba.dds</groupId>
-    <artifactId>ejercicio</artifactId>
+    <artifactId>servicio2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>ejercicio</name>
+    <name>servicio2</name>
     <url>https://github.com/dds-utn</url>
 
     <properties>

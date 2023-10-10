@@ -30,10 +30,10 @@ mvn clean package</pre>
 4. Ejecutar el proyecto
 
 <pre>java -jar target/nombre-del-archivo.jar</pre>
-***
+*** 
+⚠️
 * La API estará disponible en http://localhost:8080
 * En el index encontrarás toda la información necesaria para su utilización.
 * La dirección de la documentación **swagger** es http://localhost:8080/swagger
-
- <pre> ⚠️ Para visualizar la documentación es necesario <br/> ejecutar maven desde el archivo pom "Generate Sources and Update Folders" 🚧 </pre>
+🚧
   

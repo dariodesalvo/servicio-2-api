@@ -35,5 +35,5 @@ mvn clean package</pre>
 * En el index encontrarás toda la información necesaria para su utilización.
 * La dirección de la documentación **swagger** es http://localhost:8080/swagger
 
- <pre> ⚠️ Para visualizar la documentación swagger es necesario ejecutar maven desde el archivo pom "Generate Sources and Update Folders" 🚧 </pre>
+ <pre> ⚠️ Para visualizar la documentación es necesario <br/> ejecutar maven desde el archivo pom "Generate Sources and Update Folders" 🚧 </pre>
   

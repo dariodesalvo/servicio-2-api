@@ -1,4 +1,4 @@
-# API REST 
+# API REST 🚀
 
 ### Correspondiente al Servicio 2 del TPA de DDS
 
@@ -34,3 +34,6 @@ mvn clean package</pre>
 * La API estará disponible en http://localhost:8080
 * En el index encontrarás toda la información necesaria para su utilización.
 * La dirección de la documentación **swagger** es http://localhost:8080/swagger
+
+ <pre> ⚠️ Para visualizar la documentación swagger es necesario ejecutar maven desde el archivo pom "Generate Sources and Update Folders" 🚧 </pre>
+  
